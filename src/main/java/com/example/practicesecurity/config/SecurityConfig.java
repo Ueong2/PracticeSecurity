@@ -21,7 +21,7 @@ public class SecurityConfig {
 
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/", "/login").permitAll()     // permitAll : 로그인 하지 않아도 접근 가능한 메서드
+                        .requestMatchers("/", "/login","/loginProc","/join","/joinProc").permitAll()     // permitAll : 로그인 하지 않아도 접근 가능한 메서드
                         .requestMatchers("/admin").hasRole("ADMIN")     // hasRole : ADMIN이라는 Role이 있을 시 접근 가능한 메서드
                         .requestMatchers("/my/**").hasAnyRole("ADMIN", "USER")      // hasAnyRole : 여러 Role 설정 가능 메서드
                         .anyRequest().authenticated()   // anyRequest : 나머지 경로에 대한 권한 부여 메서드
