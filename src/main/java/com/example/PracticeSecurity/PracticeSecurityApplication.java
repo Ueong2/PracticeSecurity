@@ -9,5 +9,5 @@ public class PracticeSecurityApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PracticeSecurityApplication.class, args);
 	}
-
+	// 계정 아이디는 user, 비밀번호는 콘솔창에 출력됨
 }
