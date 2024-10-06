@@ -35,9 +35,15 @@ public class SecurityConfig {
                 .permitAll()
                 );
 
-        http
-                .csrf((auth) -> auth.disable());        // 사이트 위 변조 방지 설정, 현재 disable한 이유는 로그인 post요청을 보낼 때
-                                                        // csrf 토큰도 보내주어야 로그인이 진행되는데 현재의 개발 환경에서는 보내줄 수 없기 때문
+//        http
+//                .csrf((auth) -> auth.disable());        // 사이트 위 변조 방지 설정, 현재 disable한 이유는 로그인 post요청을 보낼 때
+//                                                        // csrf 토큰도 보내주어야 로그인이 진행되는데 현재의 개발 환경에서는 보내줄 수 없기 때문
+
+
+//        http
+//                .logout((auth) -> auth.logoutUrl("/logout")     // get요청 시 로그아웃 필요
+//                .logoutSuccessUrl("/"));
+
 
         http
                 .sessionManagement((auth) -> auth
