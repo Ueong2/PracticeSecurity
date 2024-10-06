@@ -10,3 +10,8 @@ spring:
       ddl-auto: update # update : 최초 테이블 생성 시 사용 옵션
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  servlet:
+    session:
+      timeout: 90m  # 세션 90분 유지(기본은 초 단위)
